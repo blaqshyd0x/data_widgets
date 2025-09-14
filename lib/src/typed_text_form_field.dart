@@ -146,6 +146,12 @@ class _TypedTextFormFieldState<T> extends State<TypedTextFormField<T>> {
     super.didUpdateWidget(oldWidget);
   }
 
+@override
+void dispose() {
+  controller.dispose();
+  super.dispose();
+}
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
